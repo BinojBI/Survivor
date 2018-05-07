@@ -170,7 +170,9 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nDefault bone length found in this file is different
+      form the one found in the source avatar:\n\t'LeftLeg' : position error = 7.696520
+      mm\n\t'LeftFoot' : position error = 15.233778 mm\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 1
@@ -183,7 +185,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Run_JumpUpHigh_Run
       takeName: Run_JumpUpHigh_Run
-      firstFrame: 231
+      firstFrame: 328
       lastFrame: 360
       wrapMode: 0
       orientationOffsetY: 0
@@ -207,7 +209,7 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 231
     isReadable: 1
   meshes:
     lODScreenPercentages: []
