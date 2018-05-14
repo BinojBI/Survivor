@@ -157,7 +157,7 @@ ModelImporter:
     400148: Spine
     400150: TongueBack
     400152: TongueTip
-    7400000: Idle_JumpDownLow_Idle
+    7400000: playerFall
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -170,7 +170,9 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nDefault bone length found in this file is different
+      form the one found in the source avatar:\n\t'LeftLeg' : position error = 7.696520
+      mm\n\t'LeftFoot' : position error = 15.233778 mm\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 1
@@ -181,10 +183,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle_JumpDownLow_Idle
+      name: playerFall
       takeName: _197_Idle_JumpDownLow_Idle
-      firstFrame: 75
-      lastFrame: 260
+      firstFrame: 151
+      lastFrame: 225
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -207,7 +209,7 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 75
     isReadable: 1
   meshes:
     lODScreenPercentages: []

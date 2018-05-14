@@ -6,6 +6,15 @@ public class player : MonoBehaviour {
     Rigidbody myRB;
     Animator myAnim;
     bool facingRight;
+
+    //for jumping 
+    bool grounded = false;
+    Collider[] groundCollisions;
+    float groundCheckRadious = .2f;
+    public LayerMask groundLayer;
+    public Transform groundCheck;
+    public float jumpHeight; 
+
 	// Use this for initialization
 	void Start () {
         myRB = GetComponent<Rigidbody>();
@@ -31,8 +40,19 @@ public class player : MonoBehaviour {
         theScale.z *= -1;
         transform.localScale = theScale;
     }
-    void fixedUpdate() {
+    void FixedUpdate() {
 
+        if(grounded && Input.GetAxis("Jump")>0){
+            grounded = false;
+            myAnim.SetBool("grounded",grounded);
+            myRB.AddForce(new Vector3(0,jumpHeight,0));
+        }
+
+groundCollisions = Physics.OverlapSphere(groundCheck.position,groundCheckRadious, groundLayer);
+if(groundCollisions.Length>0) grounded=true;
+else grounded = false;
+
+myAnim.SetBool("grounded",grounded);
     }
 
 }
